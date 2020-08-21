@@ -2,7 +2,7 @@
 
 ## Content:
 
-- [Project Overview](#overview)
+- [Overview](#overview)
 - [Project Components](#components)
   - [ETL Pipeline](#etl_pipeline)
   - [ML Pipeline](#ml_pipeline)
@@ -20,13 +20,15 @@
 
 <a id='overview'></a>
 
-## 1. Project Overview
+## 1 Overview
 
-In this project, I'll apply data engineering to analyze disaster data from <a href="https://www.figure-eight.com/" target="_blank">Figure Eight</a> to build a model for an API that classifies disaster messages.
+In this project disaster response data from <a href="https://www.figure-eight.com/" target="_blank">Figure Eight</a> is analyzed to build a model for an API that allows for the classification of disaster messages based on 36 different categories.
 
-_data_ directory contains a data set which are real messages that were sent during disaster events. I will be creating a machine learning pipeline to categorize these events so that appropriate disaster relief agency can be reached out for help.
+The aim is to categorize messages received to facilitate the notification to the appropriate disatser relief agencies .
 
-This project will include a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data.
+On the back end the data is processed and modeled.  The front end is a web app that allows an emergency operator to enter a message, which will then be categorized accordingly to allow for the appropriate actions to be taken.
+
+The main dashboard of the app also includes visualizations that summarize the data used as modelling input. 
 
 [Here](#eg) are a few screenshots of the web app.
 
@@ -70,13 +72,17 @@ Running [this command](#com) **from app directory** will start the web app where
 
 **_Screenshot 1_**
 
-![master](img/master.jpg)
+![dashboard](media/MainDashboard.png)
 
 What the app will do is that it will classify the text message into categories so that appropriate relief agency can be reached out for help.
 
 **_Screenshot 2_**
 
-![results](img/res.jpg)
+![result1](media/result1.png)
+
+**_Screenshot 3_**
+
+![result2](media/result2.png)
 
 <a id='run'></a>
 
@@ -184,10 +190,10 @@ As we can see the data is highly imbalanced. Though the accuracy metric is [high
 │   ├── disaster_categories.csv-------# DATA TO PROCESS
 │   ├── disaster_messages.csv---------# DATA TO PROCESS
 │   └── process_data.py---------------# PERFORMS ETL PROCESS
-├── img-------------------------------# PLOTS FOR USE IN README AND THE WEB APP
+├── media-----------------------------# IMAGES FOR USE IN README
 ├── models
-│   └── train_classifier.py-----------# PERFORMS CLASSIFICATION TASK
-
+│   ├── train_classifier.py-----------# PERFORMS CLASSIFICATION TASK
+    └── classifier.pkl----------------# A SAVED MODEL
 </pre>
 
 <a id='sw'></a>

@@ -24,7 +24,7 @@
 
 In this project disaster response data from <a href="https://www.figure-eight.com/" target="_blank">Figure Eight</a> is analyzed to build a model for an API that allows for the classification of disaster messages based on 36 different categories.
 
-The aim is to categorize messages received to facilitate the notification to the appropriate disatser relief agencies .
+The aim is to categorize messages received to facilitate the notification to the appropriate disaster relief agencies .
 
 On the back end the data is processed and modeled.  The front end is a web app that allows an emergency operator to enter a message, which will then be categorized accordingly to allow for the appropriate actions to be taken.
 
@@ -70,18 +70,15 @@ File _models/train_classifier.py_ contains machine learning pipeline that:
 
 Running [this command](#com) **from app directory** will start the web app where users can enter their query, i.e., a request message sent during a natural disaster, e.g. _"Please, we need tents and water. We are in Silo, Thank you!"_.
 
-**_Screenshot 1_**
+**_Screenshot 1  -  Main Dashboard_**
 
 ![dashboard](media/MainDashboard.png)
 
 What the app will do is that it will classify the text message into categories so that appropriate relief agency can be reached out for help.
 
-**_Screenshot 2_**
+**_Screenshot 2  -  Response page_**
 
 ![result1](media/result1.png)
-
-**_Screenshot 3_**
-
 ![result2](media/result2.png)
 
 <a id='run'></a>

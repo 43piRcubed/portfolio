@@ -20,7 +20,7 @@
 
 <a id='overview'></a>
 
-## 1 Overview
+## 1.  Overview
 
 In this project disaster response data from <a href="https://www.figure-eight.com/" target="_blank">Figure Eight</a> is analyzed to build a model for an API that allows for the classification of disaster messages based on 36 different categories.
 
@@ -34,7 +34,7 @@ The main dashboard of the app also includes visualizations that summarize the da
 
 <a id='elements'></a>
 
-## 2. Project Components
+## 2.  Project Components
 
 There are three components of this project:
 -  an ETL pipeline
@@ -43,20 +43,20 @@ There are three components of this project:
 
 <a id='etl_'></a>
 
-### 2.1. ETL Pipeline
+### 2.1  ETL Pipeline
 
-File _data/process_data.py_ contains data cleaning pipeline that:
+File **_data/process_data.py_** contains  the data cleaning pipeline which:
 
-- Loads the `messages` and `categories` dataset
-- Merges the two datasets
+- Loads the {messages} and {categories} datasets
+- Merges the datasets
 - Cleans the data
-- Stores it in a **SQLite database**
+- Stores it in an **SQLite database** _data/DisasterResponse.db_
 
 <a id='ml_'></a>
 
-### 2.2. ML Pipeline
+### 2.2  ML Pipeline
 
-File _models/train_classifier.py_ contains machine learning pipeline that:
+File **_models/train_classifier.py_** contains machine learning pipeline that:
 
 - Loads data from the **SQLite database**
 - Splits the data into training and testing sets
@@ -67,7 +67,7 @@ File _models/train_classifier.py_ contains machine learning pipeline that:
 
 <a id='flask'></a>
 
-### 2.3. Flask App
+### 2.3  Flask App
 
 <a id='eg'></a>
 

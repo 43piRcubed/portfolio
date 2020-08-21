@@ -3,18 +3,18 @@
 ## Content:
 
 - [Overview](#overview)
-- [Project Components](#components)
-  - [ETL Pipeline](#etl_pipeline)
-  - [ML Pipeline](#ml_pipeline)
-  - [Flask Web App](#flask)
-- [Running](#run)
+- [Project Elements](#elements)
+  - [ETL Pipeline](#etl_)
+  - [ML Pipeline](#ml_)
+  - [Flask App](#flask)
+- [Execution](#execute)
   - [Data Cleaning](#cleaning)
   - [Training Classifier](#training)
   - [Starting the Web App](#starting)
 - [Conclusion](#conclusion)
 - [Files](#files)
-- [Software Requirements](#sw)
-- [Credits and Acknowledgements](#credits)
+- [Requirements](#req)
+- [Credits](#credits)
 
 ***
 
@@ -30,15 +30,18 @@ On the back end the data is processed and modeled.  The front end is a web app t
 
 The main dashboard of the app also includes visualizations that summarize the data used as modelling input. 
 
-[Here](#eg) are a few screenshots of the web app.
+[Here](#flask) are a few screenshots of the web app.
 
-<a id='components'></a>
+<a id='elements'></a>
 
 ## 2. Project Components
 
 There are three components of this project:
+-  an ETL pipeline
+-  a Machine Leanring pipeline
+-  a flask app
 
-<a id='etl_pipeline'></a>
+<a id='etl_'></a>
 
 ### 2.1. ETL Pipeline
 
@@ -49,7 +52,7 @@ File _data/process_data.py_ contains data cleaning pipeline that:
 - Cleans the data
 - Stores it in a **SQLite database**
 
-<a id='ml_pipeline'></a>
+<a id='ml_'></a>
 
 ### 2.2. ML Pipeline
 
@@ -64,7 +67,7 @@ File _models/train_classifier.py_ contains machine learning pipeline that:
 
 <a id='flask'></a>
 
-### 2.3. Flask Web App
+### 2.3. Flask App
 
 <a id='eg'></a>
 
@@ -81,7 +84,7 @@ What the app will do is that it will classify the text message into categories s
 ![result1](media/result1.png)
 ![result2](media/result2.png)
 
-<a id='run'></a>
+<a id='execute'></a>
 
 ## 3. Running
 
@@ -177,8 +180,6 @@ As we can see the data is highly imbalanced. Though the accuracy metric is [high
 .
 ├── app
 │   ├── run.py------------------------# FLASK FILE THAT RUNS APP
-│   ├── static
-│   │   └── favicon.ico---------------# FAVICON FOR THE WEB APP
 │   └── templates
 │       ├── go.html-------------------# CLASSIFICATION RESULT PAGE OF WEB APP
 │       └── master.html---------------# MAIN PAGE OF WEB APP
@@ -193,7 +194,7 @@ As we can see the data is highly imbalanced. Though the accuracy metric is [high
     └── classifier.pkl----------------# A SAVED MODEL
 </pre>
 
-<a id='sw'></a>
+<a id='req'></a>
 
 ## 6. Software Requirements
 
@@ -202,7 +203,7 @@ The standard libraries which are not mentioned in _requirements.txt_ are _collec
 
 <a id='credits'></a>
 
-## 7. Credits and Acknowledgements
+## 7. Credits
 
 Thanks <a href="https://www.udacity.com" target="_blank">Udacity</a> for letting me use their logo as favicon for this web app.
 

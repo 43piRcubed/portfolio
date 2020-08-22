@@ -227,5 +227,6 @@ The standard libraries which are not mentioned in _requirements.txt_ are _collec
 
 ## 7. Credits
 
-Thank you to <a href="https://www.udacity.com" target="_blank">Udacity</a> for laying the foundations for this project
+Thank you to <a href="https://www.udacity.com" target="_blank">Udacity</a> for laying the foundations for this project.
+
 Thank you to <a href="https://www.figure-eight.com/" target="_blank">Figure Eight</a> for providing the datasets for this project

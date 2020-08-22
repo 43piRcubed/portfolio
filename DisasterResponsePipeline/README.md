@@ -9,7 +9,7 @@
   - [Flask App](#flask)
 - [Execution](#execute)
   - [Data Cleaning](#cleaning)
-  - [Training Classifier](#training)
+  - [Classifier Training](#training)
   - [Starting the Web App](#starting)
 - [Conclusion](#conclusion)
 - [Files](#files)
@@ -30,48 +30,51 @@ On the back end the data is processed and modeled.  The front end is a web app t
 
 The main dashboard of the app also includes visualizations that summarize the data used as modelling input. 
 
-[Here](#flask) are a few screenshots of the web app.
-
 <a id='elements'></a>
 
 ## 2.  Project Components
 
 There are three components of this project:
 -  an ETL pipeline
--  a Machine Leanring pipeline
+-  a Machine Learning pipeline
 -  a flask app
 
 <a id='etl_'></a>
 
 ### 2.1  ETL Pipeline
 
-File **_data/process_data.py_** contains  the data cleaning pipeline which:
+The purpose of the ETL pipeline is:
 
-- Loads the {messages} and {categories} datasets
-- Merges the datasets
-- Cleans the data
-- Stores it in an **SQLite database** _data/DisasterResponse.db_
+- Load the {messages} and {categories} datasets
+- Merge the datasets
+- Clean the data
+- Store the data in an **SQLite database**: _data/DisasterResponse.db_
+
+The ETL pipleine can be found in **_data/process_data.py_**
 
 <a id='ml_'></a>
 
 ### 2.2  ML Pipeline
 
-File **_models/train_classifier.py_** contains machine learning pipeline that:
+The purpose of the ML pipeline is:
 
-- Loads data from the **SQLite database**
-- Splits the data into training and testing sets
-- Builds a text processing and machine learning pipeline
-- Trains and tunes a model using GridSearchCV
-- Outputs result on the test set
-- Exports the final model as a pickle file
+- Load data from the **SQLite database**
+- Split the data into training and testing sets
+- Train and tune a model using GridSearchCV
+- Output the results on the test set
+- Export the final model to a pickle file
+
+the ML pipeline can be found in **_models/train_classifier.py_**
 
 <a id='flask'></a>
 
 ### 2.3  Flask App
 
-<a id='eg'></a>
+The Flask web app's main dashboard provides the main user interface as well as overview visualizations of the dataset.
+The main user interface allows emergency operators to enter a meesage they received, i.e. _"Napa flooded as Sacramento River burst over shores. Rescue help needed"_.
+The message will be classified and assigned categories out of 36 available. This allows the emrgency operators to take the next steps efficently and effectively.
 
-Running [this command](#com) **from app directory** will start the web app where users can enter their query, i.e., a request message sent during a natural disaster, e.g. _"Please, we need tents and water. We are in Silo, Thank you!"_.
+Here are some screen shots of the web app:
 
 **_Screenshot 1  -  Main Dashboard_**
 
@@ -86,31 +89,46 @@ What the app will do is that it will classify the text message into categories s
 
 <a id='execute'></a>
 
-## 3. Running
+## 3. Executing
 
-There are three steps to get up and runnning with the web app if you want to start from ETL process.
+Three steps need to be taken to get up and running:
+
+- Clean the data
+- Run the classifier
+- Launch the web app
 
 <a id='cleaning'></a>
 
-### 3.1. Data Cleaning
+### 3.1 Data Cleaning
 
-**Go to the project directory** and the run the following command:
+Requirements:
+
+- path and name of ETL pipeline code file
+- path and name of messages dataset file
+- path and name of categories dataset file
+- path and name of output database file
+
+**Go to the main project directory** and the run the command in this format:
+
+_python path/'ETL pipeline' path/'messeages dataset file' path/'categories dataset file' path/'database file'_
+
+this turns into the following command with its 3 arguments:
 
 ```bat
 python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
 ```
+ 
+This will run the ETL pipeline and create a database file with the specified name.  If the database file already exists it will be replaced with the new one.
 
-The first two arguments are input data and the third argument is the SQLite Database in which we want to save the cleaned data. The ETL pipeline is in _process_data.py_.
+below a screen shot of the process:
 
-_DisasterResponse.db_ already exists in _data_ folder but the above command will still run and replace the file with same information. 
+_**Screenshot 4  -  Processing the Data**_
 
-**_Screenshot 3_**
-
-![process_data](img/process_data.jpg)
+![process_data](media/running_ETL.png)
 
 <a id='training'></a>
 
-### 3.2. Training Classifier
+### 3.2 Classifier Training
 
 After the data cleaning process, run this command **from the project directory**:
 

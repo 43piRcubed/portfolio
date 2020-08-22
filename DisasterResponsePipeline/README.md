@@ -173,9 +173,7 @@ To do so from the main project directory we to the **app directory** to run the 
 python run.py
 ```
 
-**_Screenshot 6_**
-
-![web_app](img/web_app.jpg)
+snapshots of the app can be found [here](#flask)
 
 <a id='results'></a>
 
@@ -195,7 +193,7 @@ As we can see the data is highly imbalanced. Though the accuracy metric is [high
 
 <a id='files'></a>
 
-## 5. Files
+## 5. Project File Structure
 
 <pre>
 .
@@ -209,6 +207,9 @@ As we can see the data is highly imbalanced. Though the accuracy metric is [high
 │   ├── disaster_categories.csv-------# DATA TO PROCESS
 │   ├── disaster_messages.csv---------# DATA TO PROCESS
 │   └── process_data.py---------------# PERFORMS ETL PROCESS
+├── exploration
+│   ├── 
+
 ├── media-----------------------------# IMAGES FOR USE IN README
 ├── models
 │   ├── train_classifier.py-----------# PERFORMS CLASSIFICATION TASK

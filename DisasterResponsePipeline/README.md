@@ -76,13 +76,13 @@ The message will be classified and assigned categories out of 36 available. This
 
 Here are some screen shots of the web app:
 
-**_Screenshot 1  -  Main Dashboard_**
+**_Fig. 1  -  Main Dashboard_**
 
 ![dashboard](media/MainDashboard.png)
 
 What the app will do is that it will classify the text message into categories so that appropriate relief agency can be reached out for help.
 
-**_Screenshot 2  -  Response page_**
+**_Fig. 2 & 3  -  Response page_**
 
 ![result1](media/result1.png)
 ![result2](media/result2.png)
@@ -122,7 +122,7 @@ This will run the ETL pipeline and create a database file with the specified nam
 
 below a screen shot of the process:
 
-_**Screenshot 3  -  Processing the Data**_
+_**Fig. 4  -  Processing the Data**_
 
 ![process_data](media/running_ETL.png)
 
@@ -153,7 +153,7 @@ If the classifier pickle file already exists it will be replaced with the new on
 
 below a screen shot of the process:
 
-_**Screenshot 4  -  Running the ML Pipeline**_
+_**Fig. 5 & 6  -  Running the ML Pipeline**_
 
 ![classifier_1](media/running_ML.png)
 ![classifier_2](media/running_ML_end.png)
@@ -179,17 +179,13 @@ snapshots of the app can be found [here](#flask)
 
 ## 4. Results
 
-Some information about training data set as seen on the main page of the web app.
+Here is some data about the trainig dataset, which can also be seen on the main dashboard fo the web app.
 
-**_Screenshot 7_**
+**_Fig. 7  -  Samples per category in Data Set_**
 
-![genre](img/genre.jpg)
+![cat_dist](media/visualTrainData.png)
 
-**_Screenshot 8_**
-
-![dist](img/dist.jpg)
-
-As we can see the data is highly imbalanced. Though the accuracy metric is [high](#acc) (you will see the exact value after the model is trained by grid search, it is ~0.94), it has a poor value for recall (~0.6). So, take appropriate measures when using this model for decision-making process at a larger scale or in a production environment.
+The data is highly imbalanced. While accuracy is high (approximately 0.95) the recall measure is quite low (approximately 0.6). This leads to a model that has a hard time detecting the categories, but can be trusted with the ones it predicts. It might be beneficial to get more data to improve model performance. Methods such as undersampling or oversampling could be investigated to balance the dataset.  However these methods do have their own inherent issues that will impact the accuracy of the final model.
 
 <a id='files'></a>
 
@@ -208,12 +204,14 @@ As we can see the data is highly imbalanced. Though the accuracy metric is [high
 │   ├── disaster_messages.csv---------# DATA TO PROCESS
 │   └── process_data.py---------------# PERFORMS ETL PROCESS
 ├── exploration
-│   ├── 
-
+│   ├── data-pipeline.py--------------# DATA PIPELINE TEMPLATE
+│   ├── ETL Pipeline Preparation.ipynb# Jupyter Notebook for ETL Pipeline
+│   └── ML Pipeline Preparation.ipynb-# Jupyter Notebook for ML Pipeline
 ├── media-----------------------------# IMAGES FOR USE IN README
 ├── models
 │   ├── train_classifier.py-----------# PERFORMS CLASSIFICATION TASK
-    └── classifier.pkl----------------# A SAVED MODEL
+│   └── classifier.pkl----------------# A SAVED MODEL
+└──
 </pre>
 
 <a id='req'></a>

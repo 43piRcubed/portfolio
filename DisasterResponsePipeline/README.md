@@ -164,18 +164,14 @@ At the end of the training process the model is evaluated and saved in the pickl
 
 ### 3.3 Web App
 
-After modeling the data and obtaining a model that has bene saved, it is now possible to run the web app, enter messages and have them classified.
-To do so,
+After modeling the data and obtaining a model that has been saved, it is now possible to run the web app, enter messages and have them classified.
+To do so from the main project directory we to the **app directory** to run the following command
 
 **Go the app directory** and run the following command:
-
-<a id='com'></a>
 
 ```bat
 python run.py
 ```
-
-This will start the web app and will direct you to a URL where you can enter messages and get classification results for it.
 
 **_Screenshot 6_**
 
@@ -230,6 +226,5 @@ The standard libraries which are not mentioned in _requirements.txt_ are _collec
 
 ## 7. Credits
 
-Thanks <a href="https://www.udacity.com" target="_blank">Udacity</a> for letting me use their logo as favicon for this web app.
-
-Another <a href="https://medium.com/udacity/three-awesome-projects-from-udacitys-data-scientist-program-609ff0949bed" target="_blank">blog post</a> was a great motivation to improve my documentation. This post discusses some of the cool projects from <a href="https://in.udacity.com/course/data-scientist-nanodegree--nd025" target="_blank">Data Scientist Nanodegree</a> students. This really shows how far we can go if we apply the concepts learned beyond the classroom content to build something that inspire others.
+Thank you to <a href="https://www.udacity.com" target="_blank">Udacity</a> for laying the foundations for this project
+Thank you to <a href="https://www.figure-eight.com/" target="_blank">Figure Eight</a> for providing the datasets for this project

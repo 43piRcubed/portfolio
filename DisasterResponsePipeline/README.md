@@ -14,7 +14,7 @@
 - [Results](#results)
 - [Project File Structure](#files)
 - [Requirements](#req)
-- [Credits](#credits)
+- [Mentions](#mentions)
 
 ***
 
@@ -221,9 +221,9 @@ The data is highly imbalanced. While accuracy is high (approximately 0.95) the r
 This project uses **Python 3.6.6** and the necessary libraries are mentioned in _requirements.txt_.
 The standard libraries which are not mentioned in _requirements.txt_ are _collections_, _json_, _operator_, _pickle_, _pprint_, _re_, _sys_, _time_ and _warnings_.
 
-<a id='credits'></a>
+<a id='mentions'></a>
 
-## 7. Credits
+## 7. Mentions
 
 Thank you to <a href="https://www.udacity.com" target="_blank">Udacity</a> for laying the foundations for this project.
 

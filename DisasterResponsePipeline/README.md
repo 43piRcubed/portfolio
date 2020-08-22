@@ -12,7 +12,7 @@
   - [Classifier Training](#training)
   - [Web App](#web)
 - [Conclusion](#conclusion)
-- [Files](#files)
+- [Project File Structure](#files)
 - [Requirements](#req)
 - [Credits](#credits)
 

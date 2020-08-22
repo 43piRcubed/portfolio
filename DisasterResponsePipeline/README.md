@@ -11,7 +11,7 @@
   - [Data Cleaning](#cleaning)
   - [Classifier Training](#training)
   - [Web App](#web)
-- [Conclusion](#conclusion)
+- [Results](#results)
 - [Project File Structure](#files)
 - [Requirements](#req)
 - [Credits](#credits)
@@ -158,21 +158,14 @@ _**Screenshot 4  -  Running the ML Pipeline**_
 ![classifier_1](media/running_ML.png)
 ![classifier_2](media/running_ML_end.png)
 
-At the end of the training process 
-
-When the models is saved, it will look something like this.
-
-<a id='acc'></a>
-
-**_Screenshot 5_**
-
-![classifier_2](media/running_ML_end.png)
+At the end of the training process the model is evaluated and saved in the pickle file
 
 <a id='web'></a>
 
 ### 3.3 Web App
 
-Now that we have cleaned the data and trained our model. Now it's time to see the prediction in a user friendly way.
+After modeling the data and obtaining a model that has bene saved, it is now possible to run the web app, enter messages and have them classified.
+To do so,
 
 **Go the app directory** and run the following command:
 
@@ -188,9 +181,9 @@ This will start the web app and will direct you to a URL where you can enter mes
 
 ![web_app](img/web_app.jpg)
 
-<a id='conclusion'></a>
+<a id='results'></a>
 
-## 4. Conclusion
+## 4. Results
 
 Some information about training data set as seen on the main page of the web app.
 

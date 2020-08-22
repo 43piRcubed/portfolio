@@ -10,7 +10,7 @@
 - [Execution](#execute)
   - [Data Cleaning](#cleaning)
   - [Classifier Training](#training)
-  - [Starting the Web App](#starting)
+  - [Web App](#web)
 - [Conclusion](#conclusion)
 - [Files](#files)
 - [Requirements](#req)
@@ -22,9 +22,9 @@
 
 ## 1.  Overview
 
-In this project disaster response data from <a href="https://www.figure-eight.com/" target="_blank">Figure Eight</a> is analyzed to build a model for an API that allows for the classification of disaster messages based on 36 different categories.
+In this project disaster response data from <a href="https://www.figure-eight.com/" target="_blank">Figure Eight</a> is analyzed to build a model for Web App that allows for the classification of disaster messages based on 36 different categories.
 
-The aim is to categorize messages received to facilitate the notification to the appropriate disaster relief agencies .
+The aim is to categorize messages received to facilitate the notification to the appropriate disaster relief agencies by emergency personnel.
 
 On the back end the data is processed and modeled.  The front end is a web app that allows an emergency operator to enter a message, which will then be categorized accordingly to allow for the appropriate actions to be taken.
 
@@ -110,7 +110,7 @@ Requirements:
 
 **Go to the main project directory** and the run the command in this format:
 
-_python path/'ETL pipeline' path/'messeages dataset file' path/'categories dataset file' path/'database file'_
+_python path/'ETL pipeline'  path/'messages dataset file'  path/'categories dataset file'  path/'database file'_
 
 this turns into the following command with its 3 arguments:
 
@@ -122,7 +122,7 @@ This will run the ETL pipeline and create a database file with the specified nam
 
 below a screen shot of the process:
 
-_**Screenshot 4  -  Processing the Data**_
+_**Screenshot 3  -  Processing the Data**_
 
 ![process_data](media/running_ETL.png)
 
@@ -130,21 +130,35 @@ _**Screenshot 4  -  Processing the Data**_
 
 ### 3.2 Classifier Training
 
-After the data cleaning process, run this command **from the project directory**:
+Requirements:
+
+- path and name of ML pipeline code file
+- path and name of database file  that was created by the dta processing step
+- path and name of of the pickle file where the optimized model will be saved
+
+
+Run this command **from the main project directory** in this format:
+
+_python path/'ML Piplpeine'  path/'Database File name' path/'name of pickle file'_
+
+this turns into the following command with its 2 arguments:
 
 ```bat
 python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 ```
 
-This will use cleaned data to train the model, improve the model with grid search and saved the model to a pickle file (_classifer.pkl_).
+This will train the model, improve the model with grid search and save it to a pickle file (_classifer.pkl_).
 
-_classifier.pkl_ already exists but the above command will still run and replace the file will same information.
+If the classifier pickle file already exists it will be replaced with the new one.
 
-_**Screenshot 4**_
+below a screen shot of the process:
 
-![train_classifier_1](img/train_classifier_1.jpg)
+_**Screenshot 4  -  Running the ML Pipeline**_
 
-It took me around **4 minutes** to train the classifier with grid search.
+![classifier_1](media/running_ML.png)
+![classifier_2](media/running_ML_end.png)
+
+At the end of the training process 
 
 When the models is saved, it will look something like this.
 
@@ -152,11 +166,11 @@ When the models is saved, it will look something like this.
 
 **_Screenshot 5_**
 
-![train_classifier_2.jpg](img/train_classifier_2.jpg)
+![classifier_2](media/running_ML_end.png)
 
-<a id='starting'></a>
+<a id='web'></a>
 
-### 3.3. Starting the web app
+### 3.3 Web App
 
 Now that we have cleaned the data and trained our model. Now it's time to see the prediction in a user friendly way.
 

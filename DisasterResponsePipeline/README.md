@@ -218,8 +218,23 @@ The data is highly imbalanced. While accuracy is high (approximately 0.95) the r
 
 ## 6. Software Requirements
 
-This project uses **Python 3.6.6** and the necessary libraries are mentioned in _requirements.txt_.
-The standard libraries which are not mentioned in _requirements.txt_ are _collections_, _json_, _operator_, _pickle_, _pprint_, _re_, _sys_, _time_ and _warnings_.
+This project uses an Anaconda install with Python 3.6.3 and the follwoig libraries:
+
+- sys
+- json
+- re
+- math
+- operator
+- pickle
+- time
+- warnings
+- flask==0.12.4
+- nltk==3.2.5
+- numpy==1.12.1
+- pandas==0.23.3
+- plotly==2.0.15
+- scikit-learn==0.19.1
+- sqlalchemy==1.2.18
 
 <a id='mentions'></a>
 

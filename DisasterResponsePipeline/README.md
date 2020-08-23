@@ -220,21 +220,21 @@ The data is highly imbalanced. While accuracy is high (approximately 0.95) the r
 
 This project uses an Anaconda install with Python 3.6.3 and the following libraries:
 
-- sys
-- json
-- re
-- math
-- operator
-- pickle
-- time
-- warnings
-- flask=0.12.4
-- nltk=3.2.5
-- numpy=1.12.1
-- pandas=0.23.3
-- plotly=2.0.15
 - scikit-learn=0.19.1
 - sqlalchemy=1.2.18
+- plotly=2.0.15
+- pandas=0.23.3
+- numpy=1.12.1
+- flask=0.12.4
+- nltk=3.2.5
+- operator
+- warnings
+- pickle
+- json
+- math
+- time
+- sys
+- re
 
 <a id='mentions'></a>
 

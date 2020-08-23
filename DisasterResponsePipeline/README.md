@@ -179,7 +179,7 @@ snapshots of the app can be found [here](#flask)
 
 ## 4. Results
 
-Here is some data about the trainig dataset, which can also be seen on the main dashboard of the web app.
+Below, there is some information about the training dataset, which can also be seen on the main dashboard of the web app.
 
 **_Fig. 7  -  Samples per category in Data Set_**
 

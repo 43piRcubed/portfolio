@@ -59,7 +59,7 @@ The ETL pipeline can be found in **_data/process_data.py_**
 The purpose of the ML pipeline is:
 
 - Load data from the **SQLite database**
-- Split the data into training and testing sets
+- Split the data into training and test sets
 - Train and tune a model using GridSearchCV
 - Output the results on the test set
 - Export the final model to a pickle file

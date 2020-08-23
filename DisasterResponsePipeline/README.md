@@ -50,7 +50,7 @@ The purpose of the ETL pipeline is:
 - Clean the data
 - Store the data in an **SQLite database**: _data/DisasterResponse.db_
 
-The ETL pipleine can be found in **_data/process_data.py_**
+The ETL pipeline can be found in **_data/process_data.py_**
 
 <a id='ml_'></a>
 

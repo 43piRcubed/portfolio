@@ -228,13 +228,13 @@ This project uses an Anaconda install with Python 3.6.3 and the following librar
 - pickle
 - time
 - warnings
-- flask==0.12.4
-- nltk==3.2.5
-- numpy==1.12.1
-- pandas==0.23.3
-- plotly==2.0.15
-- scikit-learn==0.19.1
-- sqlalchemy==1.2.18
+- flask=0.12.4
+- nltk=3.2.5
+- numpy=1.12.1
+- pandas=0.23.3
+- plotly=2.0.15
+- scikit-learn=0.19.1
+- sqlalchemy=1.2.18
 
 <a id='mentions'></a>
 

@@ -185,7 +185,7 @@ Here is some data about the trainig dataset, which can also be seen on the main 
 
 ![cat_dist](media/visualTrainingData.png)
 
-The data is highly imbalanced. While accuracy is high (approximately 0.95) the recall measure is quite low (approximately 0.6). This leads to a model that has a hard time detecting the categories, but can be trusted with the ones it predicts. It might be beneficial to get more data to improve model performance. Methods such as undersampling or oversampling could be investigated to balance the dataset.  However these methods do have their own inherent issues that will impact the accuracy of the final model.
+The data is highly imbalanced. While accuracy is high (approximately 0.95) the recall measure is quite low (approximately 0.6). This leads to a model that has a hard time detecting the categories, but can be trusted with the ones it predicts. It might be beneficial to get more data to improve model performance. Methods such as undersampling or oversampling could be investigated to balance the dataset.  However these methods do have their own inherent issues that will reduce the accuracy of the final model.
 
 <a id='files'></a>
 

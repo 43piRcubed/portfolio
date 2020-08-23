@@ -173,7 +173,9 @@ To do so from the main project directory we to the **app directory** to run the 
 python run.py
 ```
 
-snapshots of the app can be found [here](#flask)
+Then go to you web browser and go to the follwoing address: _http://0.0.0.0:3001/_
+
+Snapshots of the app can be found [here](#flask)
 
 <a id='results'></a>
 

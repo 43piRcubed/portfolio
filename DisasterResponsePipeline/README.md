@@ -165,9 +165,7 @@ At the end of the training process the model is evaluated and saved in the pickl
 ### 3.3 Web App
 
 After modeling the data and obtaining a model that has been saved, it is now possible to run the web app, enter messages and have them classified.
-To do so from the main project directory we to the **app directory** to run the following command
-
-**Go the app directory** and run the following command:
+To do so from the main project directory we to the **app directory** to run the following command:
 
 ```bat
 python run.py

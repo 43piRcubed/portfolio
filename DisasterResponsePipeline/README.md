@@ -72,7 +72,7 @@ the ML pipeline can be found in **_models/train_classifier.py_**
 
 The Flask web app's main dashboard provides the main user interface as well as overview visualizations of the dataset.
 The main user interface allows emergency operators to enter a meesage they received, i.e. _"Napa flooded as Sacramento River burst over shores. Rescue help needed"_.
-The message will be classified and assigned categories out of 36 available. This allows the emrgency operators to take the next steps efficently and effectively.
+The message will be classified and assigned categories out of 36 available. This allows the emergency operators to take the next steps efficently and effectively.
 
 Here are some screen shots of the web app:
 
@@ -110,7 +110,7 @@ Requirements:
 
 **Go to the main project directory** and the run the command in this format:
 
-_python path/'ETL pipeline'  path/'messages dataset file'  path/'categories dataset file'  path/'database file'_
+_python path/'ETL pipeline'  [path/'messages dataset file'  path/'categories dataset file'  path/'database file']_
 
 this turns into the following command with its 3 arguments:
 
@@ -139,7 +139,7 @@ Requirements:
 
 Run this command **from the main project directory** in this format:
 
-_python path/'ML Piplpeine'  path/'Database File name' path/'name of pickle file'_
+_python path/'ML Piplpeine'  [path/'Database File name' path/'name of pickle file']_
 
 this turns into the following command with its 2 arguments:
 

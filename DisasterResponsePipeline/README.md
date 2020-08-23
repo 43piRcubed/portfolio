@@ -194,23 +194,23 @@ The data is highly imbalanced. While accuracy is high (approximately 0.95) the r
 <pre>
 .
 ├── app
-│   ├── run.py------------------------# FLASK FILE THAT RUNS APP
+│   ├── run.py--------------------------# Flask file that runs the web app
 │   └── templates
-│       ├── go.html-------------------# CLASSIFICATION RESULT PAGE OF WEB APP
-│       └── master.html---------------# MAIN PAGE OF WEB APP
+│       ├── go.html---------------------# Classification result page of web app
+│       └── master.html-----------------# Main page of web app
 ├── data
-│   ├── DisasterResponse.db-----------# DATABASE TO SAVE CLEANED DATA TO
-│   ├── disaster_categories.csv-------# DATA TO PROCESS
-│   ├── disaster_messages.csv---------# DATA TO PROCESS
-│   └── process_data.py---------------# PERFORMS ETL PROCESS
+│   ├── DisasterResponse.db-------------# Database containing cleaned data
+│   ├── disaster_categories.csv---------# Dataset to process
+│   ├── disaster_messages.csv-----------# Dataset to process
+│   └── process_data.py-----------------# File that runs the ETL process
 ├── exploration
-│   ├── data-pipeline.py--------------# DATA PIPELINE TEMPLATE
-│   ├── ETL Pipeline Preparation.ipynb# Jupyter Notebook for ETL Pipeline
-│   └── ML Pipeline Preparation.ipynb-# Jupyter Notebook for ML Pipeline
-├── media-----------------------------# IMAGES FOR USE IN README
+│   ├── data-pipeline.py----------------# Data pipeline template
+│   ├── ETL Pipeline Preparation.ipynb--# Jupyter Notebook for ETL Pipeline
+│   └── ML Pipeline Preparation.ipynb---# Jupyter Notebook for ML Pipeline
+├── media-------------------------------# Images used in readme
 ├── models
-│   ├── train_classifier.py-----------# PERFORMS CLASSIFICATION TASK
-│   └── classifier.pkl----------------# A SAVED MODEL
+│   ├── train_classifier.py-------------# File that runs the ML pipeline
+│   └── classifier.pkl------------------# A saved model
 └──
 </pre>
 

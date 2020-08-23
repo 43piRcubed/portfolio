@@ -216,7 +216,7 @@ The data is highly imbalanced. While accuracy is high (approximately 0.95) the r
 
 <a id='req'></a>
 
-## 6. Software Requirements
+## 6. Requirements
 
 This project uses an Anaconda install with Python 3.6.3 and the following libraries:
 

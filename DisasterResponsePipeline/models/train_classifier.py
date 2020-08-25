@@ -107,7 +107,7 @@ def build_model():
     parameters = {
               'vect__max_df': (0.75, 1.0),
               #'vect__min_df': (0.5, 0.75, 1.0),
-              'tfidf__smooth_idf': (True),
+              'tfidf__smooth_idf': [True],
               'clf__estimator__estimator__max_iter': (500, 750, 1000)
                  }
 

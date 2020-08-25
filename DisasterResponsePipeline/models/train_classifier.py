@@ -55,12 +55,6 @@ def load_data(database_filepath):
     # get category column names
     cat_names = Y.columns
     
-    # cleaning values of 'related' category column mapping values:
-    #     0 to 0  no change
-    #     1 to 1  no change
-    #     2 to 1  remapping
-    Y['related']=Y['related'].map(lambda x: 1 if x == 2 else x)
-    
     return X, Y, cat_names
 
 def tokenize(text):

@@ -57,6 +57,9 @@ def clean_data(df):
     
     # remove duplicates from dataset based on message column 
     df.drop_duplicates(subset=['message'], inplace = True)
+
+    # dropping those rows where the value in 'related' category = 2
+    df = df[df.related != 2]
     
     return df
 

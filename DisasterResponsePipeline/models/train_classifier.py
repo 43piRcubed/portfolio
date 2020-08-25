@@ -96,19 +96,23 @@ def build_model():
         - Tuned Model after grid search
     '''
 
-    pipeline = Pipeline([
+    pipeline_svc = Pipeline([
                         ('vect', CountVectorizer(tokenizer=tokenize)),
                         ('tfidf', TfidfTransformer()),
-                        ('clf', RandomForestClassifier())
+                        ('clf', MultiOutputClassifier(
+                                OneVsRestClassifier(LinearSVC())))
                         ])
     
     # hyper-parameter grid
-    parameters = {'vect__ngram_range': ((1, 1), (1, 2)),
-                  'vect__max_df': (0.75, 1.0)
-                  }
+    parameters = {
+              'vect__max_df': (0.75, 1.0),
+              #'vect__min_df': (0.5, 0.75, 1.0),
+              'tfidf__smooth_idf': (True),
+              'clf__estimator__estimator__max_iter': (500, 750, 1000)
+                 }
 
     # create model
-    cv_model = GridSearchCV(estimator=pipeline,
+    cv_model = GridSearchCV(estimator=pipeline_svc,
                             param_grid=parameters,
                             verbose=3,
                             cv=3)

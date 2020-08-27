@@ -11,6 +11,7 @@ from sqlalchemy import create_engine
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.model_selection import train_test_split, GridSearchCV
 
 from sklearn.ensemble import RandomForestClassifier
@@ -53,7 +54,7 @@ def load_data(database_filepath):
     Y = df.iloc[:,4:]
     
     # get category column names
-    cat_names = Y.columns
+    cat_names = list(Y.columns)
     
     return X, Y, cat_names
 
@@ -96,28 +97,29 @@ def build_model():
         - Tuned Model after grid search
     '''
 
-    pipeline_svc = Pipeline([
+    mclf = MultiOutputClassifier(OneVsRestClassifier(LinearSVC()))
+
+    pipeline = Pipeline([
                         ('vect', CountVectorizer(tokenizer=tokenize)),
                         ('tfidf', TfidfTransformer()),
-                        ('clf', MultiOutputClassifier(
-                                OneVsRestClassifier(LinearSVC())))
+                        ('clf', mclf)
                         ])
     
     # hyper-parameter grid
     parameters = {
-              'vect__max_df': (0.75, 1.0),
+              'vect__max_df': [0.75, 1.0],
               #'vect__min_df': (0.5, 0.75, 1.0),
               'tfidf__smooth_idf': [True],
-              'clf__estimator__estimator__max_iter': (500, 750, 1000)
+              'clf__estimator__estimator__max_iter': [500, 750, 1000]
                  }
 
     # create model
-    cv_model = GridSearchCV(estimator=pipeline_svc,
-                            param_grid=parameters,
-                            verbose=3,
-                            cv=3)
+    model = GridSearchCV(estimator=pipeline,
+                         param_grid=parameters,
+                         verbose=3,
+                         cv=3)
     
-    return cv_model
+    return model
 
 def evaluate_model(model, X_test, Y_test, category_names):
     '''
@@ -128,17 +130,32 @@ def evaluate_model(model, X_test, Y_test, category_names):
         - X_test: Test features
         - Y_test: Test targets
         - category_names: Target labels
+
+    Output:
+        Classification metrics for each category and overall accuracy
     '''
 
     # predict
     y_pred = model.predict(X_test)
 
+    lbls = list(range(36))
+
     # print classification report
-    print(classification_report(Y_test.values, y_pred, target_names=category_names))
+    print("{: >23}\t{: <}\t{: <}\t{: <}\t\t{: <}".format('Category', 'Accuracy', 'Precision', 'Recall', 'F1 Score'))
+
+    for i in range(len(category_names)):
+
+        print("{: >23}\t{:>.4f}\t\t{:.4f}\t\t{:.4f}\t\t{:.4f}".format(
+                                                        category_names[i]+':',
+                                                        accuracy_score(Y_test.values[:, i], y_pred[:, i]),
+                                                        precision_score(Y_test.values[:, i], y_pred[:, i], average='weighted'),
+                                                        recall_score(Y_test.values[:, i], y_pred[:, i], average='weighted'),
+                                                        f1_score(Y_test.values[:, i], y_pred[:, i], average='weighted')
+                                                                     )
+             )
 
     # print accuracy score
-    print('Accuracy: {}'.format(np.mean(Y_test.values == y_pred)))
-
+    print('\n{: >23}\t{:.6f}'.format('Overall Accuracy:', np.mean(Y_test.values == y_pred)))
 
 def save_model(model, model_filepath):
     '''

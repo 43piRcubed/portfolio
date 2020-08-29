@@ -15,6 +15,7 @@
 - [Project File Structure](#files)
 - [Requirements](#req)
 - [Mentions](#mentions)
+- [References](#ref)
 
 ***
 
@@ -185,7 +186,14 @@ Below, there is some information about the training dataset, which can also be s
 
 ![cat_dist](media/visualTrainingData.png)
 
-The data is highly imbalanced. While accuracy is high (approximately 0.95) the recall measure is quite low (approximately 0.6). This leads to a model that has a hard time detecting the categories, but can be trusted with the ones it predicts. It might be beneficial to get more data to improve model performance. Methods such as undersampling or oversampling could be investigated to balance the dataset.  However these methods do have their own inherent issues that will reduce the accuracy of the final model.
+The data is highly imbalanced. While accuracy is high (approximately 0.95) the recall measure is quite low (approximately 0.6) using a random forest classifier. 
+The recall score is improved by using a onevsother classifier with a linearSVC base classifier.  
+
+One thing to keep in mind is that due to the imbalance in the data the confidence in the scores of the model will vary depending on the class: e.g. the recall score for a class that has a lot of samples will have a higher confidence than a class with less samples even if the recall scores are similar for both. 
+
+It might be beneficial to get more data to improve model performance.  This could be acchieved by simply getting more data as input to establish a new model , or for instance use a progressive learning technique that adds new samples as they come in and learns from them while retaining knowledge already acquired.  
+
+Also, methods such as undersampling or oversampling could be investigated to balance the dataset.  However these methods do have their own inherent issues that will reduce the accuracy of the final model. 
 
 <a id='files'></a>
 
@@ -243,3 +251,11 @@ This project uses an Anaconda install with Python 3.6.3 and the following librar
 Thank you to <a href="https://www.udacity.com" target="_blank">Udacity</a> for laying the foundations for this project.
 
 Thank you to <a href="https://www.figure-eight.com/" target="_blank">Figure Eight</a> for providing the datasets for this project
+
+<a id='ref'></a>
+
+## 8. References
+
+- https://en.wikipedia.org/wiki/Multiclass_classification
+- https://towardsdatascience.com/are-we-confident-our-models-recall-is-precise-133112a6c407
+

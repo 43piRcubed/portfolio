@@ -127,11 +127,13 @@ git pull origin master
 	```
 	
   4. (Optional) **If you are using AWS**, install Tensorflow.
+
  	```
 	sudo python3 -m pip install -r requirements/requirements-gpu.txt
 	```
 	
   5. Switch [Keras backend](https://keras.io/backend/) to TensorFlow.
+
 	- __Linux__ or __Mac__: 
 	```
 	KERAS_BACKEND=tensorflow python -c "from keras import backend"
@@ -142,7 +144,9 @@ git pull origin master
 	python -c "from keras import backend"
 	```
 
-  6. (Optional) **If you are running the project on your local machine (and not using AWS)**, create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `dog-project` environment. 
+  6. (Optional) **If you are running the project on your local machine (and not using AWS)**:
+
+    - create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `dog-project` environment. 
 	```
 	python -m ipykernel install --user --name dog-project --display-name "dog-project"
 	```

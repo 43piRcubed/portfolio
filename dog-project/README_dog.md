@@ -15,7 +15,7 @@ This project provides the user with the ability to predict the breedof a dog fro
 
 The algorithm built will, given an image of a dog, provide an estimate of its breed.  If supplied an image of a human, the code will identify the resembling dog breed. Lastly, If provided an image that it can not classify as dog or human it will provide an output indicating it can not provide an estimate for something not from this world.
  
-<img class="marginauto" src="./images/Sample_App_Screen_Shot.jpg" alt="drawing" width="50%"/>
+<img class="center-text" src="./images/Sample_App_Screen_Shot.jpg" alt="drawing" width="50%"/>
 <img class="marginauto" src="./images/Sample_App_Screen_Shot_Image_Selected.jpg" alt="drawing" width="50%"/>
 <img class="marginauto" src="./images/Sample_App_Screen_Shot_Output.jpg" alt="drawing" width="50%"/>
 ![Loading App][image4] ![Image Selection][image5] ![App Output][image6]

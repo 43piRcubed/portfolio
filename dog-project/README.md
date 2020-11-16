@@ -250,7 +250,7 @@ dog-project
 
 ## Requirements
 
-This project uses an Anaconda install with Python 3.6.3 and the following libraries:
+This project uses an __Anaconda__ install with __Python 3.6.3__ and the following libraries:
 
 - flask==1.1.2
 - glob2==0.7

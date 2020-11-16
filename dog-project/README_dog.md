@@ -3,7 +3,7 @@
 [image1]: ./images/sample_dog_output.png "Sample Output"
 [image2]: ./images/vgg16_model.png "VGG-16 Model Keras Layers"
 [image3]: ./images/vgg16_model_draw.png "VGG16 Model Figure"
-[image4]: (./images/Sample_App_Screen_Shot.jpg =100x) "Loading App"
+[image4]: ./images/Sample_App_Screen_Shot.jpg "Loading App"
 [image5]: ./images/Sample_App_Screen_Shot_Image_Selected.jpg "Image Selection"
 [image6]: ./images/Sample_App_Screen_Shot_Output.jpg "App Output"
 
@@ -14,8 +14,8 @@ This project provides the user with the ability to predict the breedof a dog fro
 2. A simple web application that allows the user to select an image which is the previewed on the page and upon submitting the image the dog breed will be predicted and displayed on the page. 
 
 The algorithm built will, given an image of a dog, provide an estimate of its breed.  If supplied an image of a human, the code will identify the resembling dog breed. Lastly, If provided an image that it can not classify as dog or human it will provide an output indicating it can not provide an estimate for something not from this world.
-  
-
+ 
+<img src="./images/Sample_App_Screen_Shot.jpg" alt="drawing" width="50%"/>
 ![Loading App][image4] ![Image Selection][image5] ![App Output][image6]
 
 ## Project Instructions

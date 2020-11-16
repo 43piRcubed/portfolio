@@ -196,26 +196,54 @@ jupyter notebook dog_app.ipynb
 
 <pre>
 dog-project	
-.
-├── app
-│   ├── run.py--------------------------# Flask file that runs the web app
+│
+├── [__pycache__]
+├── [.ipynb_checkpoints]
+├── [app]
+│   ├── [__pycache__]
+│   ├── [static]
+│   │   ├── dog_names.txt-------------------------# contains a list of all the dog breeds
+│   │   └── style.css-----------------------------# style sheet for web app
+│   ├── dog_breed_run.py--------------------------# Flask file that runs the web app
+│   ├── extract_bottleneck_features.py------------# library to extract bottleneck features
 │   └── templates
-│       ├── go.html---------------------# Classification result page of web app
-│       └── master.html-----------------# Main page of web app
-├── data
-│   ├── DisasterResponse.db-------------# Database containing cleaned data
-│   ├── disaster_categories.csv---------# Dataset to process
-│   ├── disaster_messages.csv-----------# Dataset to process
-│   └── process_data.py-----------------# File that runs the ETL process
-├── exploration
-│   ├── data-pipeline.py----------------# Data pipeline template
-│   ├── ETL Pipeline Preparation.ipynb--# Jupyter Notebook for ETL Pipeline
-│   └── ML Pipeline Preparation.ipynb---# Jupyter Notebook for ML Pipeline
-├── media-------------------------------# Images used in readme
-├── models
-│   ├── train_classifier.py-------------# File that runs the ML pipeline
-│   └── classifier.pkl------------------# A saved model
-└──
+│       └── master.html---------------------------# Main page of web app
+├── [bottleneck features]-------------------------# Folder that will contain all the bottleneck features
+│	├── 
+│   └── 
+├── [dogImages]-----------------------------------# Folder that will contain all the dog images
+│   ├── 
+│   └── 
+├── [haarcascades]--------------------------------# Images used in readme
+├── [images]--------------------------------------# do not delete contains sample images of dogs as well as images used in readme
+│   ├── command_line_to_run.png-------------------# do not delete
+│   ├── running_on.png----------------------------# do not delete
+│   ├── Backend_running.png-----------------------# do not delete
+│   ├── Sample_App_Screen_Shot.jpg----------------# do not delete
+│   ├── Sample_App_Screen_Shot_Image_Selected.jpg-# do not delete
+│   ├── Sample_App_Screen_Shot_Output.jpg---------# do not delete
+│   
+├── [lfw]-----------------------------------------# Folder that will contain all human face images 
+├── [requirements]
+│   ├── requirements.txt--------------------------#
+│   ├── requirements-gpu.txt----------------------#
+│   ├── dog-mac.yml-------------------------------#
+│   ├── dog-mac-gpu.yml---------------------------#
+│   ├── dog-linux.yml-----------------------------#
+│   ├── dog-linux-gpu.yml-------------------------#
+│   ├── dog-windows.yml---------------------------#
+│   └── dog-windows-gpu.yml-----------------------#
+├── [saved_models]
+│   ├── Xception_model.h5-------------------------# do not delete : dog breed prediction model
+│   ├── dog_breed_model
+│   ├── ResNet50_model.h5
+│   ├── weights.best.from_scratch.hdf5------------# saved weights for model in notebook
+│   ├── weights.best.VGG16.hdf5-------------------# saved weights for model in notebook
+│   └── weights.best.Xc.hdf5----------------------# do not delete : saved weights for Xception in notebook
+├── dog_app.ipynb---------------------------------# dog_app notebook
+├── dog_app-2.html--------------------------------# dog_app html
+├── extract_bottleneck_features.py------------# library to extract bottleneck features
+└── README.md
 </pre>
 
 <a id='req'></a>
@@ -224,34 +252,34 @@ dog-project
 
 This project uses an Anaconda install with Python 3.6.3 and the following libraries:
 
-- scikit-learn=0.19.1
-- sqlalchemy=1.2.18
-- plotly=2.0.15
-- pandas=0.23.3
-- numpy=1.12.1
-- flask=0.12.4
-- nltk=3.2.5
-- operator
-- warnings
-- pickle
-- json
-- math
-- time
-- sys
-- re
+- flask==1.1.2
+- glob2==0.7
+- h5py==2.8.0
+- ipykernel==5.3.2
+- keras==2.0.9
+- matplotlib==3.2.2
+- numpy==1.17.0
+- opencv-python==3.3.1
+- pillow==7.2.0
+- plotly==2.0.15
+- scikit-learn==0.23.1
+- scipy==1.5.0
+- tensorflow=1.3.0
+- tqdm==4.47.0
+- werkzeug==1.0.1
 
 <a id='mentions'></a>
 
 ## Mentions
 
 Thank you to <a href="https://www.udacity.com" target="_blank">Udacity</a> for laying the foundations for this project.
+Thank you to <a href="https://stackoverflow.com/" target="_blank">Stackoverflow</a> for providing invaluable information and solutions.
 
 <a id='ref'></a>
 
 ## 8. References
 
-- https://en.wikipedia.org/wiki/Multiclass_classification
-- https://towardsdatascience.com/are-we-confident-our-models-recall-is-precise-133112a6c407
+<a href="https://stackoverflow.com/" target="_blank">Stackoverflow</a>
 
 ## Project Submission
 

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DogBreed</title>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename="style.css") }}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Dog Breed Classifier</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="https://www.udacity.com/">Udacity</a></li>
+                <li><a href="https://github.com/">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="jumbotron">
+    <div class="container">
+        <!-- Title and subtitle -->
+        <h1 class="text-center">Dog Breed Classifier</h1>
+        <p class="text-center">Analyze a picture and determine the Dog Breed</p>
+        
+        <div class="row">
+            <div class="col-lg-12 form-group-lg">
+                <!-- Section for image preview and predicted dog breed -->
+                <div class="text-center">
+                    <label for="file-ip-1">
+                        <img class="center" id="file-ip-1-preview" src=""/>
+                        <h2 id="pred_breed">
+                            {% if name %}
+                                {{ name }}
+                            {% else %}
+                                What Kind Of Dog Am I?
+                            {% endif %}
+                        </h2>   
+                    </label>
+                </div>
+
+                <!-- reset image and predicted breed button-->
+                <div class="center">
+                    <button type="reset" class="imgRemove" onclick="ImgRemoveFunction()"></button>
+                </div>
+
+                <!-- intake form with a file input to select image file and a submit button that is inactive until image file is selected -->
+                <form action="/" method="POST" id="form1" enctype="multipart/form-data">
+                    <div class="image-upload-one">
+                        <div class="center">
+                            <div class="form-input">
+                                <p id="temp"></p>
+                                <p>Select a file with a dog picture: (.jpg, .jpeg)</p>
+                                <input type="file" class="form-control form-control-lg" name="img_sel" id="file-ip-1" accept="image/jpg, image/jpeg" onchange="show_image(this);readURL(this);" required/>
+                                
+                                <label>
+                                </label>
+                            </div>
+                            <small class="small">Use the ↺ icon to reset the image or select another image</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-5">
+                        <button type="submit" id="submit" form="form1" class="btn btn-lg btn-success">Classify Dog Breed</button>   
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+    // Function preview image and change caption to "What Kind Of Dog Am I"
+
+    function show_image(input){
+        
+        // if(event.target.files.length > 0){
+        if (input.files && input.files[0]){
+            //let src = URL.createObjectURL(event.target.files[0]);
+            var src = URL.createObjectURL(input.files[0]);
+            let preview = document.getElementById("file-ip-1-preview");
+            preview.src = src;
+            preview.style.display = "block";
+            //$('.box').css('background-image', 'url(' + src + ')');
+            document.getElementById("pred_breed").innerHTML = "What Kind of dog Am I?";
+            }
+    }
+
+    // Function to reset the preview image to default, clear the input field and change caption to "What Kind Of Dog Am I" 
+    
+    function ImgRemoveFunction() {
+        document.getElementById("file-ip-1-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
+        document.getElementById("file-ip-1").value = "";
+        document.getElementById("pred_breed").innerHTML = "What Kind Of Dog Am I?";
+        
+    }
+
+    // Adding Event listeners on change of input to inactivate the submit button until a file has been selected
+    
+    let inputElt = document.getElementById("file-ip-1");
+    let btn = document.getElementById("submit");
+
+    inputElt.addEventListener("file-ip-1", function(){btn.disabled = (this.value === "");
+                                                     }
+                             )
+</script>
+
+</body>
+</html>

@@ -110,7 +110,7 @@ git pull origin master
 	activate dog-project
 	```
 	
-	c. (Optional) **If you are running the project on your local machine (and not using AWS)** and Step 6 throws errors, try this __alternative__ step to create your environment.
+7. (Optional) **If you are running the project on your local machine (and not using AWS)** and Step 6 throws errors, try this __alternative__ step to create your environment.
 
 	- __Linux__ or __Mac__ (to install with __GPU support__, change `requirements/requirements.txt` to `requirements/requirements-gpu.txt`): 
 	```
@@ -125,13 +125,13 @@ git pull origin master
 	pip install -r requirements/requirements.txt
 	```
 	
-7. (Optional) **If you are using AWS**, install Tensorflow.
+8. (Optional) **If you are using AWS**, install Tensorflow.
 
  	```
 	sudo python3 -m pip install -r requirements/requirements-gpu.txt
 	```
 	
-8. Switch [Keras backend](https://keras.io/backend/) to TensorFlow.
+9. Switch [Keras backend](https://keras.io/backend/) to TensorFlow.
 
 	- __Linux__ or __Mac__: 
 	```
@@ -143,7 +143,7 @@ git pull origin master
 	python -c "from keras import backend"
 	```
 
-9. (Optional) **If you are running the project on your local machine (and not using AWS)**:
+10. (Optional) **If you are running the project on your local machine (and not using AWS)**:
 
     - create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `dog-project` environment. 
 	```
@@ -152,12 +152,12 @@ git pull origin master
 
 <a id='open_nb'></a>
 
-10. Open the notebook.
+11. Open the notebook.
 ```
 jupyter notebook dog_app.ipynb
 ```
 
-11. (Optional) **If you are running the project on your local machine (and not using AWS)**, before running code, change the kernel to match the dog-project environment by using the drop-down menu (**Kernel > Change kernel > dog-project**). Then, follow the instructions in the notebook.
+12. (Optional) **If you are running the project on your local machine (and not using AWS)**, before running code, change the kernel to match the dog-project environment by using the drop-down menu (**Kernel > Change kernel > dog-project**). Then, follow the instructions in the notebook.
 
 ## Project Submission
 

@@ -12,8 +12,8 @@
 - [Overview](#overview)
 - [Instructions](#instructions)
 - [Instructions  -  to run Jupyter Notebook](#inst_ipnoteb)
-- [Instructions -  to run web app](#webapp)
   - [Optional Steps](#opt)
+- [Instructions -  to run web app](#webapp)
 - [Project Jupyter Notebook](#open_nb)
   - [ETL Pipeline](#etl_)
   - [ML Pipeline](#ml_)
@@ -158,6 +158,39 @@ jupyter notebook dog_app.ipynb
 ```
 
 12. (Optional) **If you are running the project on your local machine (and not using AWS)**, before running code, change the kernel to match the dog-project environment by using the drop-down menu (**Kernel > Change kernel > dog-project**). Then, follow the instructions in the notebook.
+
+<a id='webapp'></a>
+
+### Instructions  -  to run webapp
+
+13. navigate to the app directory fomr the project home direcotry:
+	```
+	cd app
+	```
+14. run the backend:
+	```
+	python3 dog_breed_run.py
+	```
+15. go to your browser ( this was tested with Safari) and type in the below local server ip as indicated once the backendis fully loaded:
+	```
+	0.0.0.0:3001
+	```
+16. once the page loads:
+	```
+	select an image file in the Choose File field
+	click on the Classify Dog Breed Button
+	wait until page is loaded again (this may take some time)
+
+	The estimated dog breed wil be displayed
+
+	you can clear the form by either clicking on the top right [Dog Breed Classifier] link or the Round arrow on the right below the predicted dog breed.
+	you can also just select a new image
+
+	current file formats supported are .JPG and .JPEG
+	```
+
+
+
 
 ## Project Submission
 

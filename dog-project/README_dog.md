@@ -133,14 +133,14 @@ git pull origin master
 	
   5. Switch [Keras backend](https://keras.io/backend/) to TensorFlow.
 	- __Linux__ or __Mac__: 
-		```
-		KERAS_BACKEND=tensorflow python -c "from keras import backend"
-		```
+	```
+	KERAS_BACKEND=tensorflow python -c "from keras import backend"
+	```
 	- __Windows__: 
-		```
-		set KERAS_BACKEND=tensorflow
-		python -c "from keras import backend"
-		```
+	```
+	set KERAS_BACKEND=tensorflow
+	python -c "from keras import backend"
+	```
 
   6. (Optional) **If you are running the project on your local machine (and not using AWS)**, create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `dog-project` environment. 
 	```

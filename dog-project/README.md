@@ -250,7 +250,7 @@ dog-project
 
 ## Requirements
 
-This project uses an Anaconda install with Python 3.6.3 and the following libraries:
+This project uses an __Anaconda__ install with __Python 3.6.3__ and the following libraries:
 
 - flask==1.1.2
 - glob2==0.7
@@ -277,15 +277,6 @@ Thank you to <a href="https://stackoverflow.com/" target="_blank">Stackoverflow<
 
 <a id='ref'></a>
 
-## 8. References
+## References
 
 <a href="https://stackoverflow.com/" target="_blank">Stackoverflow</a>
-
-## Project Submission
-
-When you are ready to submit your project, collect the following files and compress them into a single archive for upload:
-- The `dog_app.ipynb` file with fully functional code, all code cells executed and displaying output, and all questions answered.
-- An HTML or PDF export of the project notebook with the name `report.html` or `report.pdf`.
-- Any additional images used for the project that were not supplied to you for the project. __Please do not include the project data sets in the `dogImages/` or `lfw/` folders.  Likewise, please do not include the `bottleneck_features/` folder.__
-
-Alternatively, your submission could consist of the GitHub link to your repository.

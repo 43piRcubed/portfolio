@@ -87,6 +87,7 @@ git pull origin master
 
 <a id='opt'></a>
 5. Optional Steps
+
 	1. (Optional) __If you plan to install TensorFlow with GPU support on your local machine__, follow [the guide](https://www.tensorflow.org/install/) to install the necessary 	NVIDIA software on your system.  If you are using an EC2 GPU instance, you can skip this step.
 
 	2. (Optional) **If you are running the project on your local machine (and not using AWS)**, create (and activate) a new environment.

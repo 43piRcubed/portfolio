@@ -20,7 +20,6 @@ The algorithm built will, given an image of a dog, provide an estimate of its br
 <img class="marginauto" src="./images/Sample_App_Screen_Shot_Image_Selected.jpg" alt="drawing" width="50%"/>
 <img class="marginauto" src="./images/Sample_App_Screen_Shot_Output.jpg" alt="drawing" width="50%"/>
 </p>
-![Loading App][image4] ![Image Selection][image5] ![App Output][image6]
 
 ## Project Instructions
 
@@ -28,15 +27,36 @@ The algorithm built will, given an image of a dog, provide an estimate of its br
 
 1. Clone the repository and navigate to the downloaded folder.
 ```	
-git clone https://github.com/udacity/dog-project.git
-cd dog-project
+# Create a directory on yur computer, so Git doesn't get messy, and go to it
+mkdir my-dir 
+cd my-dir
+
+# Start a Git repository
+git init
+
+# Track repository, do not enter subdirectory
+git remote add -f origin https://github.com/43piRcubed/portfolio
+
+# Enable the tree check feature
+git config core.sparseCheckout true
+
+# Create a file in the path: .git/info/sparse-checkout
+# That is inside the hidden .git directory that was created
+# by running the command: git init
+# And inside it enter the name of the sub directory you only want to clone
+echo 'files' >> .git/info/sparse-checkout
+
+## Download with pull, not clone
+git pull origin master
 ```
 
-2. Download the [dog dataset](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip).  Unzip the folder and place it in the repo, at location `path/to/dog-project/dogImages`. 
+### Instructions  -  to run Jupyter Notebook
 
-3. Download the [human dataset](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/lfw.zip).  Unzip the folder and place it in the repo, at location `path/to/dog-project/lfw`.  If you are using a Windows machine, you are encouraged to use [7zip](http://www.7-zip.org/) to extract the folder. 
+2. Download the [dog dataset](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip).  Unzip the folder and place it in the repo, at location `path/to/dog-project/dogImages`.  The direcotry already exists but is empty 
 
-4. Donwload the [VGG-16 bottleneck features](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/DogVGG16Data.npz) for the dog dataset.  Place it in the repo, at location `path/to/dog-project/bottleneck_features`.
+3. Download the [human dataset](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/lfw.zip).  Unzip the folder and place it in the repo, at location `path/to/dog-project/lfw`.  If you are using a Windows machine, you are encouraged to use [7zip](http://www.7-zip.org/) to extract the folder. The direcotry already exists but is empty
+
+4. Donwload the [VGG-16 bottleneck features](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/DogVGG16Data.npz) for the dog dataset.  Place it in the repo, at location `path/to/dog-project/bottleneck_features`.  The direcotry already exists but is empty
 
 5. (Optional) __If you plan to install TensorFlow with GPU support on your local machine__, follow [the guide](https://www.tensorflow.org/install/) to install the necessary NVIDIA software on your system.  If you are using an EC2 GPU instance, you can skip this step.
 

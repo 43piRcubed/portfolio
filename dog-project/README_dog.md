@@ -1,8 +1,8 @@
 [//]: # (Image References)
 
-[image1]: ./images/sample_dog_output.png "Sample Output"
-[image2]: ./images/vgg16_model.png "VGG-16 Model Keras Layers"
-[image3]: ./images/vgg16_model_draw.png "VGG16 Model Figure"
+[image1]: ./images/command_line_to_run.png "CommandLine"
+[image2]: ./images/running_on.png "running_on"
+[image3]: ./images/Backend_running.png "backennd_ok"
 [image4]: ./images/Sample_App_Screen_Shot.jpg "Loading App"
 [image5]: ./images/Sample_App_Screen_Shot_Image_Selected.jpg "Image Selection"
 [image6]: ./images/Sample_App_Screen_Shot_Output.jpg "App Output"
@@ -15,11 +15,6 @@
   - [Optional Steps](#opt)
 - [Instructions -  to run web app](#webapp)
 - [Project Jupyter Notebook](#open_nb)
-  - [ETL Pipeline](#etl_)
-  - [ML Pipeline](#ml_)
-  - [Flask App](#flask)
-- [Results](#results)
-- [Project File Structure](#files)
 - [Requirements](#req)
 - [Mentions](#mentions)
 - [References](#ref)
@@ -66,7 +61,7 @@ git config core.sparseCheckout true
 # That is inside the hidden .git directory that was created
 # by running the command: git init
 # And inside it enter the name of the sub directory you only want to clone
-echo 'files' >> .git/info/sparse-checkout
+echo 'dog-project' >> .git/info/sparse-checkout
 
 ## Download with pull, not clone
 git pull origin master
@@ -163,21 +158,26 @@ jupyter notebook dog_app.ipynb
 
 ### Instructions  -  to run webapp
 
-13. navigate to the app directory fomr the project home direcotry:
+13. Navigate to the app directory from the project home direcotry:
 	```
 	cd app
 	```
-14. run the backend:
+14. Run the backend:
 	```
 	python3 dog_breed_run.py
 	```
-15. Go to your browser ( this was tested with Safari) and type in the below local server ip as indicated once the backendis fully loaded:
+	![CommandLine][image1]
+	
+15. Go to your browser ( this was tested with Safari) and type in the below local server ip as indicated once the backend is fully loaded:
 	```
 	0.0.0.0:3001
 	```
+	![running_on][image2]
+	![backennd_ok][image3]
+
 16. Once the page loads:
 	```
-	select an image file in the Choose File field
+	select an image file in the Choose File field (slect an image file fomr your computer)
 	click on the Classify Dog Breed Button
 	wait until page is loaded again (this may take some time)
 
@@ -190,8 +190,68 @@ jupyter notebook dog_app.ipynb
 	current file formats supported are .JPG and .JPEG
 	```
 
+<a id='files'></a>
 
+## Project File Structure
 
+<pre>
+dog-project	
+.
+├── app
+│   ├── run.py--------------------------# Flask file that runs the web app
+│   └── templates
+│       ├── go.html---------------------# Classification result page of web app
+│       └── master.html-----------------# Main page of web app
+├── data
+│   ├── DisasterResponse.db-------------# Database containing cleaned data
+│   ├── disaster_categories.csv---------# Dataset to process
+│   ├── disaster_messages.csv-----------# Dataset to process
+│   └── process_data.py-----------------# File that runs the ETL process
+├── exploration
+│   ├── data-pipeline.py----------------# Data pipeline template
+│   ├── ETL Pipeline Preparation.ipynb--# Jupyter Notebook for ETL Pipeline
+│   └── ML Pipeline Preparation.ipynb---# Jupyter Notebook for ML Pipeline
+├── media-------------------------------# Images used in readme
+├── models
+│   ├── train_classifier.py-------------# File that runs the ML pipeline
+│   └── classifier.pkl------------------# A saved model
+└──
+</pre>
+
+<a id='req'></a>
+
+## Requirements
+
+This project uses an Anaconda install with Python 3.6.3 and the following libraries:
+
+- scikit-learn=0.19.1
+- sqlalchemy=1.2.18
+- plotly=2.0.15
+- pandas=0.23.3
+- numpy=1.12.1
+- flask=0.12.4
+- nltk=3.2.5
+- operator
+- warnings
+- pickle
+- json
+- math
+- time
+- sys
+- re
+
+<a id='mentions'></a>
+
+## Mentions
+
+Thank you to <a href="https://www.udacity.com" target="_blank">Udacity</a> for laying the foundations for this project.
+
+<a id='ref'></a>
+
+## 8. References
+
+- https://en.wikipedia.org/wiki/Multiclass_classification
+- https://towardsdatascience.com/are-we-confident-our-models-recall-is-precise-133112a6c407
 
 ## Project Submission
 

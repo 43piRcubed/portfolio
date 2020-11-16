@@ -167,7 +167,7 @@ jupyter notebook dog_app.ipynb
 	python3 dog_breed_run.py
 	```
 	![CommandLine][image1]
-	
+
 15. Go to your browser ( this was tested with Safari) and type in the below local server ip as indicated once the backend is fully loaded:
 	```
 	0.0.0.0:3001
@@ -177,7 +177,7 @@ jupyter notebook dog_app.ipynb
 
 16. Once the page loads:
 	```
-	select an image file in the Choose File field (slect an image file fomr your computer)
+	select an image file in the Choose File field (select an image file from your computer)
 	click on the Classify Dog Breed Button
 	wait until page is loaded again (this may take some time)
 

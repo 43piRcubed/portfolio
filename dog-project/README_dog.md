@@ -264,7 +264,7 @@ This project uses an Anaconda install with Python 3.6.3 and the following librar
 - plotly==2.0.15
 - scikit-learn==0.23.1
 - scipy==1.5.0
-- tensorflow=1.3.0
+- tensorflow==1.3.0
 - tqdm==4.47.0
 - werkzeug==1.0.1
 

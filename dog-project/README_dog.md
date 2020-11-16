@@ -7,6 +7,25 @@
 [image5]: ./images/Sample_App_Screen_Shot_Image_Selected.jpg "Image Selection"
 [image6]: ./images/Sample_App_Screen_Shot_Output.jpg "App Output"
 
+## Content:
+
+- [Overview](#overview)
+- [Instructions](#instructions)
+- [Instructions  -  to run Jupyter Notebook](#inst_ipnoteb)
+- [Instructions -  to run web app](#webapp)
+- [Project Jupyter Notebook](#open_nb)
+  - [ETL Pipeline](#etl_)
+  - [ML Pipeline](#ml_)
+  - [Flask App](#flask)
+- [Results](#results)
+- [Project File Structure](#files)
+- [Requirements](#req)
+- [Mentions](#mentions)
+- [References](#ref)
+
+
+<a id='overview'></a>
+
 ## Dog Breed Classifier  -  Project Overview
 
 This project provides the user with the ability to predict the breedof a dog from an image selected from their computer.  It consists of 2 part:
@@ -20,6 +39,8 @@ The algorithm built will, given an image of a dog, provide an estimate of its br
 <img class="marginauto" src="./images/Sample_App_Screen_Shot_Image_Selected.jpg" alt="drawing" width="50%"/>
 <img class="marginauto" src="./images/Sample_App_Screen_Shot_Output.jpg" alt="drawing" width="50%"/>
 </p>
+
+<a id='instructions'></a>
 
 ## Project Instructions
 
@@ -49,6 +70,8 @@ echo 'files' >> .git/info/sparse-checkout
 ## Download with pull, not clone
 git pull origin master
 ```
+
+<a id='inst_ipnoteb'></a>
 
 ### Instructions  -  to run Jupyter Notebook
 
@@ -117,18 +140,14 @@ sudo python3 -m pip install -r requirements/requirements-gpu.txt
 python -m ipykernel install --user --name dog-project --display-name "dog-project"
 ```
 
+<a id='open_nb'></a>
+
 11. Open the notebook.
 ```
 jupyter notebook dog_app.ipynb
 ```
 
 12. (Optional) **If you are running the project on your local machine (and not using AWS)**, before running code, change the kernel to match the dog-project environment by using the drop-down menu (**Kernel > Change kernel > dog-project**). Then, follow the instructions in the notebook.
-
-__NOTE:__ While some code has already been implemented to get you started, you will need to implement additional functionality to successfully answer all of the questions included in the notebook. __Unless requested, do not modify code that has already been included.__
-
-## Evaluation
-
-Your project will be reviewed by a Udacity reviewer against the CNN project [rubric](https://review.udacity.com/#!/rubrics/810/view).  Review this rubric thoroughly, and self-evaluate your project before submission.  All criteria found in the rubric must meet specifications for you to pass.
 
 ## Project Submission
 

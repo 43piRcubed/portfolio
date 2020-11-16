@@ -171,11 +171,11 @@ jupyter notebook dog_app.ipynb
 	```
 	python3 dog_breed_run.py
 	```
-15. go to your browser ( this was tested with Safari) and type in the below local server ip as indicated once the backendis fully loaded:
+15. Go to your browser ( this was tested with Safari) and type in the below local server ip as indicated once the backendis fully loaded:
 	```
 	0.0.0.0:3001
 	```
-16. once the page loads:
+16. Once the page loads:
 	```
 	select an image file in the Choose File field
 	click on the Classify Dog Breed Button
@@ -183,8 +183,9 @@ jupyter notebook dog_app.ipynb
 
 	The estimated dog breed wil be displayed
 
-	you can clear the form by either clicking on the top right [Dog Breed Classifier] link or the Round arrow on the right below the predicted dog breed.
-	you can also just select a new image
+	You can clear the form by either clicking on the top right [Dog Breed Classifier] link 
+	or the Round Arrow on the right below the predicted dog breed.
+	You can also just select a new image
 
 	current file formats supported are .JPG and .JPEG
 	```

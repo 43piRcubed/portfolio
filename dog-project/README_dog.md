@@ -13,6 +13,7 @@
 - [Instructions](#instructions)
 - [Instructions  -  to run Jupyter Notebook](#inst_ipnoteb)
 - [Instructions -  to run web app](#webapp)
+  - [Optional Steps](#opt)
 - [Project Jupyter Notebook](#open_nb)
   - [ETL Pipeline](#etl_)
   - [ML Pipeline](#ml_)
@@ -84,25 +85,27 @@ git pull origin master
 	2.	[Resnet50 bottleneck features](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/DogResnet50Data.npz) for the dog dataset.
 	3.	[Xception bottleneck features](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/DogXceptionData.npz) for the dog dataset.
 
-5. (Optional) __If you plan to install TensorFlow with GPU support on your local machine__, follow [the guide](https://www.tensorflow.org/install/) to install the necessary NVIDIA software on your system.  If you are using an EC2 GPU instance, you can skip this step.
+<a id='overview'></a>
+5. Optional Steps
+	1. (Optional) __If you plan to install TensorFlow with GPU support on your local machine__, follow [the guide](https://www.tensorflow.org/install/) to install the necessary 	NVIDIA software on your system.  If you are using an EC2 GPU instance, you can skip this step.
 
-6. (Optional) **If you are running the project on your local machine (and not using AWS)**, create (and activate) a new environment.
+	2. (Optional) **If you are running the project on your local machine (and not using AWS)**, create (and activate) a new environment.
 
-	- __Linux__ (to install with __GPU support__, change `requirements/dog-linux.yml` to `requirements/dog-linux-gpu.yml`): 
-	```
-	conda env create -f requirements/dog-linux.yml
-	source activate dog-project
-	```  
-	- __Mac__ (to install with __GPU support__, change `requirements/dog-mac.yml` to `requirements/dog-mac-gpu.yml`): 
-	```
-	conda env create -f requirements/dog-mac.yml
-	source activate dog-project
-	```  
-	- __Windows__ (to install with __GPU support__, change `requirements/dog-windows.yml` to `requirements/dog-windows-gpu.yml`):  
-	```
-	conda env create -f requirements/dog-windows.yml
-	activate dog-project
-	```
+		- __Linux__ (to install with __GPU support__, change `requirements/dog-linux.yml` to `requirements/dog-linux-gpu.yml`): 
+		```
+		conda env create -f requirements/dog-linux.yml
+		source activate dog-project
+		```  
+		- __Mac__ (to install with __GPU support__, change `requirements/dog-mac.yml` to `requirements/dog-mac-gpu.yml`): 
+		```
+		conda env create -f requirements/dog-mac.yml
+		source activate dog-project
+		```  
+		- __Windows__ (to install with __GPU support__, change `requirements/dog-windows.yml` to `requirements/dog-windows-gpu.yml`):  
+		```
+		conda env create -f requirements/dog-windows.yml
+		activate dog-project
+		```
 	
 7. (Optional) **If you are running the project on your local machine (and not using AWS)** and Step 6 throws errors, try this __alternative__ step to create your environment.
 

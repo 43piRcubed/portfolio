@@ -5,7 +5,7 @@ werkzeug==1.0.1
 opencv-python==3.3.1
 h5py==2.8.0
 matplotlib==3.2.2
-numpy==1.17.0
+numpy==1.22.0
 scipy==1.5.0
 tqdm==4.47.0
 keras==2.0.9
